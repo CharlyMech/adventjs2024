@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import Bento from './components/bento';
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center">
-      <div className='flex flex-col items-center'>
+      <div className='flex flex-col items-center mb-4'>
         <Link href='https://adventjs.dev/' target='_blank'>
           <Image
             src="/logo.webp"
@@ -16,9 +17,10 @@ export default function Home() {
         </Link>
         <p>2024 Edition</p>
       </div>
-      <div>
+      <div className='flex flex-col items-center mb-10'>
         <p>Welcome to the 2024 edition of AdventJS, a challenge from <Link className='underline text-blue-400' href='https://www.youtube.com/c/midudev' target='_blank'>@midudev</Link></p>
       </div>
+      <Bento />
     </div>
   );
 }
