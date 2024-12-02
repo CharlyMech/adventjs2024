@@ -35,3 +35,5 @@ const gifts3: number[] = [];
 const preparedGifts3 = prepareGifts(gifts3);
 console.log(preparedGifts3); // []
 // There are no gifts, the list remains empty
+
+// 5⭐ //
