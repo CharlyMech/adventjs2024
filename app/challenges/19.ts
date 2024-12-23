@@ -47,19 +47,26 @@ function distributeWeight(weight: number): string {
 		}
 
 		const boxWeight: number = boxKeys[0];
-		boxes.push(boxRepresentations[boxWeight]);
+		const boxRepresentation: string[] = [...boxRepresentations[boxWeight]];
+
+		if (boxes.length > 0) {
+			const previousBoxTop: string = boxes[boxes.length - 1][0];
+			const currentBoxBottom: string =
+				boxRepresentation[boxRepresentation.length - 1];
+			console.log(previousBoxTop, "\n", currentBoxBottom);
+			const paddedBottom: string = currentBoxBottom.padEnd(
+				previousBoxTop.length - 1,
+				"_"
+			);
+			boxRepresentation[boxRepresentation.length - 1] = paddedBottom;
+			boxes[boxes.length - 1].shift();
+		}
+
+		boxes.push(boxRepresentation);
 		weight -= boxWeight;
 	}
 
-	boxes.reverse();
-	const stackedBoxes: string[] = boxes.reduce(
-		(acc: string[], box: string[]) => {
-			const boxTop: RegExp = new RegExp(/\s-+\s/);
-			return acc.concat(box);
-		},
-		[]
-	);
-	return stackedBoxes.join("\n");
+	return boxes.reverse().flat().join("\n");
 }
 
 distributeWeight(1);
@@ -97,4 +104,4 @@ distributeWeight(6);
 // |     |
 // |_____|
 
-// 4 ⭐ //
+// 2 ⭐ //
