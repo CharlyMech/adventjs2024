@@ -23,7 +23,6 @@ You must return:
 */
 
 function isRobotBack(moves: string): true | [number, number] {
-	const movesList = moves.split("");
 	const robotCoordinates: [number, number] = [0, 0];
 	const movementsMap: { [key: string]: [number, number] } = {
 		L: [-1, 0],
@@ -36,8 +35,8 @@ function isRobotBack(moves: string): true | [number, number] {
 	let checkMovementDone = false;
 	const movementsDone = new Set<string>();
 
-	for (let i = 0; i < movesList.length; i++) {
-		let move = movesList[i];
+	for (let i = 0; i < moves.length; i++) {
+		let move = moves[i];
 		let transformation = 1;
 
 		if (invertMovement) {
@@ -60,27 +59,17 @@ function isRobotBack(moves: string): true | [number, number] {
 			checkMovementDone = false;
 		}
 
-		switch (move) {
-			case "R":
-			case "L":
-			case "U":
-			case "D":
-				const moveVector = movementsMap[move];
-				robotCoordinates[0] += moveVector[0] * transformation;
-				robotCoordinates[1] += moveVector[1] * transformation;
-				movementsDone.add(move);
-				break;
-			case "*":
-				doubleMovement = true;
-				break;
-			case "!":
-				invertMovement = true;
-				break;
-			case "?":
-				checkMovementDone = true;
-				break;
-			default:
-				break;
+		if (move in movementsMap) {
+			const [dx, dy] = movementsMap[move];
+			robotCoordinates[0] += dx * transformation;
+			robotCoordinates[1] += dy * transformation;
+			movementsDone.add(move);
+		} else if (move === "*") {
+			doubleMovement = true;
+		} else if (move === "!") {
+			invertMovement = true;
+		} else if (move === "?") {
+			checkMovementDone = true;
 		}
 	}
 
@@ -116,4 +105,4 @@ isRobotBack("UU!U?D"); // [0,1]
 // '!U' -> inverts and becomes 'D'
 // '?D' -> does not move, since the 'D' movement has already been done
 
-// 1 ⭐ //
+// 4 ⭐ //
