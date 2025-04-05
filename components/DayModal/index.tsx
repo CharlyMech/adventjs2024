@@ -2,7 +2,9 @@
 
 import { useRouter } from "next/router";
 
-export function DayModal({ children }) {
+export function DayModal({ children }: Readonly<{
+	children: React.ReactNode;
+}>) {
 	const router = useRouter();
 
 	const handleClose = () => {
