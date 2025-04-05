@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono } from 'next/font/google'
 import "./globals.css";
-import Footer from "./footer";
+import { Footer, NavBar } from "@/components/export";
 
 export const metadata: Metadata = {
   title: "AdventJS 2024",
@@ -22,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${ibm_plex_mono.variable}`}>
+        <NavBar />
         {/*  flex flex-col min-h-screen antialiased */}
         <main className="flex-grow">{children}</main>
         <Footer />

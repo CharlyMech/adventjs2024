@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Bento from './components/bento';
+import { Bento } from "@/components/export";
+import { bentoItems } from '@/data/bentoItems';
 
 export default function Home() {
   return (
@@ -17,10 +18,12 @@ export default function Home() {
         </Link>
         <p>2024 Edition</p>
       </div>
-      <div className='flex flex-col items-center mb-10'>
+      <div className='flex flex-col items-center mb-5'>
         <p>Welcome to the 2024 edition of AdventJS, a challenge from <Link className='underline text-blue-400' href='https://www.youtube.com/c/midudev' target='_blank'>@midudev</Link></p>
       </div>
-      <Bento />
+      <section className='my-8'>
+        <Bento days={bentoItems} />
+      </section>
     </div>
   );
 }

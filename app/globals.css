@@ -5,30 +5,36 @@
 :root {
 	--background: #254c3b;
 	--foreground: #ffffff;
-  --primary: #eb4e3c
-  --secondary: #f0db4f
+	--primary: #eb4e3c;
+	--secondary: #f0db4f;
 }
+
 .ibm_plex_mono {
-  font-family: var(--ibm-plex-mono);
+	font-family: var(--ibm-plex-mono);
 }
 
 body {
-  margin: 0;
-  color: var(--foreground);
+	margin: 0;
+	color: var(--foreground);
 	background: var(--background);
-  font-family: var(--ibm-plex-mono);
+	font-family: var(--ibm-plex-mono);
+	position: relative;
+	min-height: 100vh;
 }
 
 body::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
-  background-size: 30px 30px;
-  z-index: -1; 
-  pointer-events: none;
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(
+		circle,
+		rgba(255, 255, 255, 0.2) 1px,
+		transparent 1px
+	);
+	background-size: 30px 30px;
+	z-index: 0;
+	pointer-events: none;
 }
-
