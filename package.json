@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.7",
     "blendy": "^0.0.1",
     "motion": "^12.0.0-alpha.2",
     "next": "15.0.3",
