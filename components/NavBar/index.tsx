@@ -47,7 +47,7 @@ export function NavBar({
 
 	return (
 		<nav
-			className="w-full px-[32px] py-[20px]"
+			className="w-full px-[32px] py-[20px] flex justify-between"
 		>
 			{/* Left side - GitHub badge */}
 			<div className="flex items-center space-x-4">
@@ -88,9 +88,12 @@ export function NavBar({
 			</div>
 
 			{/* Right side */}
-			<div className="flex items-center space-x-6">
-				<a href={githubUrl}></a>
-			</div>
+			<Link href={githubUrl} target="_blank">
+				<div className="flex items-center space-x-2 h-10 w-50 rounded-[12px] p-2 shadow-lg" style={{ backgroundColor: "#0E1217" }}>
+					<div className="rounded-[8px] bg-white p-1"><PhosphorIcon.GithubLogo color="#0E1217" size={20} /></div>
+					<p className="text-white text-xs">Project&apos;s repository</p>
+				</div>
+			</Link>
 		</nav>
 	);
 }

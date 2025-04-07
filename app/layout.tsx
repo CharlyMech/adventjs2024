@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${ibm_plex_mono.variable}`}>
-        <NavBar />
+        <NavBar githubUrl="https://github.com/CharlyMech/adventjs2024" />
         {/*  flex flex-col min-h-screen antialiased */}
         <main className="flex-grow">{children}</main>
         <Footer />
