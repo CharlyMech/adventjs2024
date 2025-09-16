@@ -3,17 +3,26 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import * as PhosphorIcon from "@phosphor-icons/react";
 import { ElementType } from "react";
+import { GitHubBadge } from "../GitHubBadge";
+// Import specific icons from Tabler Icons (both regular and filled versions)
+import {
+	IconHome,
+	IconHomeFilled,
+	IconUser,
+	IconUserFilled,
+	IconInfoCircle,
+	IconInfoCircleFilled
+} from '@tabler/icons-react';
 
 export type NavigationItem = {
 	href: string;
 	label: string;
-	icon: keyof typeof PhosphorIcon;
+	icon: ElementType;
+	iconFilled: ElementType;
 };
 
 type FullScreenNavbarProps = {
-	githubUrl: string;
 	externalImage?: {
 		src: string;
 		link: string;
@@ -25,31 +34,31 @@ const navigationItems: NavigationItem[] = [
 	{
 		href: "/",
 		label: "Home",
-		icon: "House",
+		icon: IconHome,
+		iconFilled: IconHomeFilled,
 	},
 	{
 		href: "/about-me",
 		label: "About Me",
-		icon: "User",
+		icon: IconUser,
+		iconFilled: IconUserFilled,
 	},
 	{
 		href: "/about-adventjs",
 		label: "About AdventJS",
-		icon: "Info",
+		icon: IconInfoCircle,
+		iconFilled: IconInfoCircleFilled,
 	},
 ];
 
 export function NavBar({
-	githubUrl,
 	externalImage,
 }: FullScreenNavbarProps) {
 	const pathname = usePathname();
 
 	return (
-		<nav
-			className="w-full px-[32px] py-[20px] flex justify-between"
-		>
-			{/* Left side - GitHub badge */}
+		<nav className="w-full px-[32px] py-[20px] flex justify-between">
+			{/* Left side*/}
 			<div className="flex items-center space-x-4">
 				{/* External image link (hidden on small screens) */}
 				{externalImage && (
@@ -69,9 +78,9 @@ export function NavBar({
 				)}
 
 				{/* Dynamic Nav Links */}
-				{navigationItems.map(({ href, label, icon }) => {
+				{navigationItems.map(({ href, label, icon, iconFilled }) => {
 					const isActive = pathname === href;
-					const IconComponent = PhosphorIcon[icon] as ElementType;
+					const IconComponent = isActive ? iconFilled : icon;
 
 					return (
 						<Link key={href} href={href}>
@@ -79,7 +88,10 @@ export function NavBar({
 								className={`flex items-center space-x-1 hover:text-white hover:opacity-100 transition text-white ${isActive ? "opacity-100 font-semibold" : "opacity-60"
 									}`}
 							>
-								<IconComponent weight={isActive ? "fill" : "duotone"} size={20} />
+								<IconComponent
+									stroke={1.5}
+									size={20}
+								/>
 								<span className="hidden md:inline">{label}</span>
 							</span>
 						</Link>
@@ -88,12 +100,7 @@ export function NavBar({
 			</div>
 
 			{/* Right side */}
-			<Link href={githubUrl} target="_blank">
-				<div className="flex items-center space-x-2 h-10 w-50 rounded-[12px] p-2 shadow-lg" style={{ backgroundColor: "#0E1217" }}>
-					<div className="rounded-[8px] bg-white p-1"><PhosphorIcon.GithubLogo color="#0E1217" size={20} /></div>
-					<p className="text-white text-xs">Project&apos;s repository</p>
-				</div>
-			</Link>
+			<GitHubBadge githubUrl="https://github.com/CharlyMech/adventjs2024" />
 		</nav>
 	);
 }
