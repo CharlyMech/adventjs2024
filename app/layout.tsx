@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono } from 'next/font/google'
 import "./globals.css";
-import { Footer, NavBar } from "@/components/export";
+import { Footer, NavBar } from "@/components";
 
 export const metadata: Metadata = {
   title: "AdventJS 2024",

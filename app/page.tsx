@@ -1,11 +1,10 @@
 import Link from 'next/link';
 import { bentoItems } from '@/data/bentoItems';
-import { Card } from '@/components/Card';
-import { AdventJSLogo } from '@/components/AdventJSLogo';
+import { Card, AdventJSLogo } from '@/components';
 
 export default function Home() {
   return (
-    <div className="min-h-max bg-yellow-300 bg-opacity-15">
+    <div className="min-h-max">
       <section className='mb-[64px]'>
         <div className='flex flex-col items-center mb-4'>
           <AdventJSLogo />
@@ -16,9 +15,10 @@ export default function Home() {
         </div>
       </section>
       <section className='px-[32px]'>
-        <h3>Challenges:</h3>
-        <div className='flex flex-col items-center gap-[24px] bg-white bg-opacity-15 min-w-[400px]'>
-          {bentoItems.map((day) => <Card key={day.id} day={day} />)}
+        <div className='w-full'>
+          <div className='flex flex-wrap justify-center gap-[24px] max-w-[50%] mx-auto'>
+            {bentoItems.map((day) => <Card key={day.day} day={day} />)}
+          </div>
         </div>
       </section>
     </div>
