@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { bentoItems } from '@/data/bentoItems';
+import { challenges } from '@/data/challenges';
 import { Card, AdventJSLogo } from '@/components';
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
       <section className='px-[32px]'>
         <div className='w-full'>
           <div className='flex flex-wrap justify-center gap-[24px] max-w-[50%] mx-auto'>
-            {bentoItems.map((day) => <Card key={day.day} day={day} />)}
+            {challenges.map((day) => <Card key={day.day} day={day} />)}
           </div>
         </div>
       </section>
