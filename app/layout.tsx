@@ -20,12 +20,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${ibm_plex_mono.variable}`}>
+    <html lang="en" className="h-full">
+      <body className={`${ibm_plex_mono.variable} h-full flex flex-col`}>
         <NavBar />
-        <main className="flex-grow min-w-[400px] max-w-[1440px] mx-auto">{children}</main>
+        <main className="flex-1 min-w-[400px] max-w-[1440px] mx-auto w-full pt-[100px] pb-4">
+          {children}
+        </main>
         <Footer />
       </body>
-    </html >
+    </html>
   );
 }
