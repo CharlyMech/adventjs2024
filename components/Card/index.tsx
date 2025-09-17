@@ -1,20 +1,35 @@
 'use client';
 
 import { motion } from "motion/react";
-import { BentoItem } from "@/data/bentoItems";
+import { Challenge } from "@/data/challenges";
+import { DifficultyBadge, StarRating } from "@/components";
 
 type CardProps = {
-	day: BentoItem;
+	day: Challenge;
 };
 
 export function Card({ day }: CardProps) {
 	return (
 		<motion.div
 			whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
-			className={`relative bg-transparent p-6 rounded-lg shadow-lg flex items-center justify-center overflow-hidden cursor-pointer`}
+			className="relative bg-transparent min-w-[350px] max-w-[550px] p-[16px] rounded-lg shadow-lg flex items-center justify-center overflow-hidden cursor-pointer w-full"
 		>
 			<div className="absolute inset-0 bg-black bg-opacity-10 backdrop-blur-sm rounded-lg shadow-inner"></div>
-			<span className="text-xl font-semibold z-10">Day {day.day}</span>
+			<div className="w-full h-full z-10">
+				<div className="w-full flex items-center">
+					<div className="flex-1 items-center justify-start">
+						<p className="text-xl font-semibold text-start">Day {day.day}</p>
+					</div>
+					<div className="flex-1 flex flex-col gap-[16px]">
+						<div className="flex items-center justify-end">
+							<DifficultyBadge difficulty={day.difficulty} />
+						</div>
+						<div className="flex items-center justify-end">
+							<StarRating rating={day.stars} />
+						</div>
+					</div>
+				</div>
+			</div>
 		</motion.div>
 	);
 }
