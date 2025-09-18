@@ -3,18 +3,29 @@
 import { motion } from "motion/react";
 import { Challenge } from "@/data/challenges";
 import { DifficultyBadge, StarRating } from "@/components";
+import { useRouter } from "next/navigation";
 
 type CardProps = {
 	day: Challenge;
 };
 
 export function Card({ day }: CardProps) {
+	const router = useRouter();
+	const handleClick = () => {
+		router.push(`/day/${day.day}`);
+	};
+
+
 	return (
 		<motion.div
-			whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
+			whileHover={{ scale: 1.05 }}
+			whileTap={{ scale: 0.95 }}
+			onClick={() => router.push(`/day/${day.day}`)}
 			className="relative bg-transparent min-w-[350px] max-w-[550px] p-[16px] rounded-lg shadow-lg flex items-center justify-center overflow-hidden cursor-pointer w-full"
+			role="link"
+			aria-label={`Go to challenge day ${day.day}`}
 		>
-			<div className="absolute inset-0 bg-black bg-opacity-10 backdrop-blur-sm rounded-lg shadow-inner"></div>
+			<div className="absolute inset-0 bg-black/10 backdrop-blur-sm rounded-lg shadow-inner" />
 			<div className="w-full h-full z-10">
 				<div className="w-full flex items-center">
 					<div className="flex-1 items-center justify-start">
