@@ -6,7 +6,7 @@ export function BackButton() {
 	const router = useRouter();
 	return (
 		<button
-			onClick={() => router.back()}
+			onClick={() => router.push('/')}
 			className="inline-flex items-center gap-2 text-sm opacity-80 hover:opacity-100 transition"
 			aria-label="Go back"
 		>
