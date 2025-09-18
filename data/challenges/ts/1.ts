@@ -3,7 +3,7 @@ Santa Claus 🎅 has received a list of magical numbers representing gifts 🎁,
 
 Your task is to write a function that receives a list of integers (which may include duplicates) and returns a new list without duplicates, sorted in ascending order.
 
-onst gifts1 = [3, 1, 2, 3, 4, 2, 5]
+const gifts1 = [3, 1, 2, 3, 4, 2, 5]
 const preparedGifts1 = prepareGifts(gifts1)
 console.log(preparedGifts1) // [1, 2, 3, 4, 5]
 
@@ -18,7 +18,6 @@ console.log(preparedGifts3) // []
 */
 
 function prepareGifts(gifts: number[]): number[] {
-	// Code here
 	const uniqueList = [...new Set(gifts)];
 	return uniqueList.sort((a, b) => a - b);
 }
