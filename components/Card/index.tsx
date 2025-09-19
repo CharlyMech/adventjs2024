@@ -21,7 +21,7 @@ export function Card({ day }: CardProps) {
 			whileHover={{ scale: 1.05 }}
 			whileTap={{ scale: 0.95 }}
 			onClick={() => router.push(`/day/${day.day}`)}
-			className="relative bg-transparent min-w-[350px] max-w-[550px] p-[16px] rounded-lg shadow-lg flex items-center justify-center overflow-hidden cursor-pointer w-full"
+			className="relative bg-transparent min-w-[350px] max-w-[550px] p-[16px] rounded-[8px] shadow-lg flex items-center justify-center overflow-hidden cursor-pointer w-full"
 			role="link"
 			aria-label={`Go to challenge day ${day.day}`}
 		>
