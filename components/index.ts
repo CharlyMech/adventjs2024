@@ -5,4 +5,4 @@ export { AdventJSLogo } from "./AdventJSLogo";
 export { GitHubBadge } from "./GitHubBadge";
 export { StarRating } from "./StarRating";
 export { DifficultyBadge } from "./DifficultyBadge";
-export { BackButton } from "./BackButton";
+export { DayRouteButton } from "./DayRouteButton";
