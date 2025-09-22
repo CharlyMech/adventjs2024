@@ -28,7 +28,7 @@ export function DayChallengeContent({
 					</div>
 				)}
 				{challenge.additionalComment && (
-					<b><p>{challenge.additionalComment}</p></b>
+					<div dangerouslySetInnerHTML={{ __html: challenge.additionalComment }} />
 				)}
 			</div>
 		);
@@ -37,7 +37,7 @@ export function DayChallengeContent({
 	return (
 		<div>
 			{challenge.statement && (
-				<p className="italic" dangerouslySetInnerHTML={{ __html: challenge.statement }} />
+				<div className="rich-html italic" dangerouslySetInnerHTML={{ __html: challenge.statement }} />
 			)}
 			{challenge.code && (
 				<div className="my-4">
@@ -49,7 +49,7 @@ export function DayChallengeContent({
 				</div>
 			)}
 			{challenge.additionalComment && (
-				<b><p dangerouslySetInnerHTML={{ __html: challenge.additionalComment }} /></b>
+				<div dangerouslySetInnerHTML={{ __html: challenge.additionalComment }} />
 			)}
 		</div>
 	);

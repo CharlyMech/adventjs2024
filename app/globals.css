@@ -38,3 +38,21 @@ body::before {
 	z-index: 0;
 	pointer-events: none;
 }
+
+/* For code based content on challenge day */
+.rich-html ul {
+	list-style: disc;
+	margin-left: 1.25rem;
+	padding-left: 1.25rem;
+}
+.rich-html ol {
+	list-style: decimal;
+	margin-left: 1.25rem;
+	padding-left: 1.25rem;
+}
+.rich-html li {
+	margin: 0.25rem 0;
+}
+.rich-html p {
+	margin: 0.75rem 0;
+}
