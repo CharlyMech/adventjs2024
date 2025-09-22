@@ -2,6 +2,7 @@
 
 import { Challenge } from "@/data/challenges";
 import { useEffect, useState } from "react";
+import { CodeBlock } from "@/components/CodeBlock";
 
 export function DayChallengeContent({
 	challenge,
@@ -19,7 +20,13 @@ export function DayChallengeContent({
 				{challenge.statement && (
 					<p className="italic">{challenge.statement}</p>
 				)}
-				{/* CODEBLOCK */}
+				{challenge.code && (
+					<div className="bg-gray-100 p-4 rounded-lg my-4">
+						<pre className="text-sm font-mono whitespace-pre-wrap">
+							<code>{challenge.code}</code>
+						</pre>
+					</div>
+				)}
 				{challenge.additionalComment && (
 					<b><p>{challenge.additionalComment}</p></b>
 				)}
@@ -32,7 +39,15 @@ export function DayChallengeContent({
 			{challenge.statement && (
 				<p className="italic" dangerouslySetInnerHTML={{ __html: challenge.statement }} />
 			)}
-			{/* CODEBLOCK */}
+			{challenge.code && (
+				<div className="my-4">
+					<CodeBlock
+						code={challenge.code}
+						language="typescript"
+						showLineNumbers={true}
+					/>
+				</div>
+			)}
 			{challenge.additionalComment && (
 				<b><p dangerouslySetInnerHTML={{ __html: challenge.additionalComment }} /></b>
 			)}
