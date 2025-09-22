@@ -22,14 +22,6 @@ export type NavigationItem = {
 	iconFilled: ElementType;
 };
 
-type FullScreenNavbarProps = {
-	externalImage?: {
-		src: string;
-		link: string;
-		alt: string;
-	};
-};
-
 const navigationItems: NavigationItem[] = [
 	{
 		href: "/",
@@ -51,33 +43,13 @@ const navigationItems: NavigationItem[] = [
 	},
 ];
 
-export function NavBar({
-	externalImage,
-}: FullScreenNavbarProps) {
+export function NavBar() {
 	const pathname = usePathname();
 
 	return (
 		<nav className="fixed top-0 left-0 right-0 z-50 w-full px-[32px] py-[20px] flex justify-between backdrop-blur-xl bg-white/5 shadow-lg shadow-gray/10">
 			{/* Left side*/}
 			<div className="flex items-center space-x-4">
-				{/* External image link (hidden on small screens) */}
-				{externalImage && (
-					<a
-						href={externalImage.link}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="hidden md:inline-block"
-					>
-						<Image
-							src={externalImage.src}
-							alt={externalImage.alt}
-							width={40}
-							height={40}
-						/>
-					</a>
-				)}
-
-				{/* Dynamic Nav Links */}
 				{navigationItems.map(({ href, label, icon, iconFilled }) => {
 					const isActive = pathname === href;
 					const IconComponent = isActive ? iconFilled : icon;
