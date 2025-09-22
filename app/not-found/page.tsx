@@ -11,7 +11,7 @@ export default function NotFoundPage() {
 							Page not found
 						</h2>
 						<p className="text-white/60 text-base md:text-lg mb-8 max-w-md mx-auto leading-relaxed">
-							Sorry but the page you are lookign for does not exist in this website.
+							Sorry but the page you are looking for does not exist in this website.
 						</p>
 					</div>
 				</div>
