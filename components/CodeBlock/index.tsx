@@ -39,7 +39,6 @@ export function CodeBlock({
 
 	return (
 		<div className="relative">
-			<div className="absolute top-0 right-0 z-10 mr-[8px] mt-[8px] bg-[#6d6d6d] text-white p-2 rounded-[4px]">{language}</div>
 			<div className="rounded-[8px] overflow-hidden">
 				<SyntaxHighlighter
 					language={language}
