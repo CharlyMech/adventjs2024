@@ -4,7 +4,6 @@ import { challenges, Challenge } from "@/data/challenges";
 import { DayChallengeContent, DayRouteButton } from "@/components";
 import { useEffect, useState } from "react";
 
-
 type Props = {
 	params: Promise<{ id: string }>;
 };
