@@ -4,7 +4,7 @@ import { Card, AdventJSLogo } from '@/components';
 
 export default function Home() {
   return (
-    <div className="min-h-max">
+    <main className="min-h-max mx-auto px-6 py-12">
       <section className='mb-[64px]'>
         <div className='flex flex-col items-center mb-4'>
           <AdventJSLogo />
@@ -21,6 +21,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
