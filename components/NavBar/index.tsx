@@ -36,8 +36,8 @@ const navigationItems: NavigationItem[] = [
 		iconFilled: IconUserFilled,
 	},
 	{
-		href: "/about-adventjs",
-		label: "About AdventJS",
+		href: "/adventjs",
+		label: "AdventJS",
 		icon: IconInfoCircle,
 		iconFilled: IconInfoCircleFilled,
 	},
