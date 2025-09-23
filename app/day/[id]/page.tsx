@@ -1,15 +1,16 @@
 "use client";
 import { notFound, useRouter } from "next/navigation";
-import { challenges } from "@/data/challenges";
+import { challenges, Challenge } from "@/data/challenges";
 import { DayChallengeContent, DayRouteButton } from "@/components";
 import { useEffect, useState } from "react";
+
 
 type Props = {
 	params: Promise<{ id: string }>;
 };
 
 export default function DayPage({ params }: Props) {
-	const [challenge, setChallenge] = useState<any>(null);
+	const [challenge, setChallenge] = useState<Challenge | null>(null);
 	const [currentDay, setCurrentDay] = useState<number>(0);
 	const [loading, setLoading] = useState(true);
 	const router = useRouter();
@@ -54,7 +55,11 @@ export default function DayPage({ params }: Props) {
 	const hasNextDay = currentDay < 26;
 
 	if (loading) {
-		return <div>Loading...</div>;
+		return (
+			<div className="flex items-center justify-center min-h-screen">
+				<div className="text-lg">Loading...</div>
+			</div>
+		);
 	}
 
 	if (!challenge) {
