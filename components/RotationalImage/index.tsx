@@ -49,10 +49,10 @@ export function RotationalImage({
 		<div className={`relative w-full h-full flex items-center justify-center ${className}`}>
 			{/* Image container */}
 			<div
-				className="relative"
+				className="relative w-full overflow-visible"
 				style={{
-					width: `${width}px`,
-					height: `${height}px`,
+					width: "100%",
+					aspectRatio: `${width} / ${height}`,
 					borderRadius,
 					perspective: "2000px"
 				}}
@@ -61,13 +61,16 @@ export function RotationalImage({
 					<motion.div
 						key={currentSrc}
 						className="absolute inset-0"
-						initial={{ rotateY: -90, opacity: 1 }}
-						animate={{ rotateY: 0, opacity: 1 }}
-						exit={{ rotateY: 90, opacity: 1 }}
+						initial={{ rotateY: -90, opacity: 1, scale: 0.92 }}
+						animate={{ rotateY: 0, opacity: 1, scale: 1 }}
+						exit={{ rotateY: 90, opacity: 1, scale: 0.92 }}
 						transition={{
 							duration: 0.3,
 						}}
 						style={{
+							transformOrigin: "center",
+							willChange: "transform",
+							transformPerspective: 5000,
 							transformStyle: "preserve-3d",
 							backfaceVisibility: "hidden"
 						}}
@@ -77,14 +80,12 @@ export function RotationalImage({
 							alt={currentAlt}
 							fill
 							priority={priority}
-							sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 700px"
+							sizes="100vw"
 							className="object-cover"
 							style={{ borderRadius }}
 						/>
 					</motion.div>
 				</AnimatePresence>
-
-				{/* Floating button positioned at bottom center of image */}
 				<button
 					onClick={toggleImage}
 					aria-label={buttonLabel}
@@ -104,7 +105,6 @@ export function RotationalImage({
 					>
 						<IconRotateClockwise size={20} className="text-black" />
 					</motion.div>
-
 				</button>
 			</div>
 		</div>
