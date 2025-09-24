@@ -4,8 +4,19 @@ import "./globals.css";
 import { Footer, NavBar } from "@/components";
 
 export const metadata: Metadata = {
-  title: "AdventJS 2024",
-  description: "Challenge from Spanish streamer and content creator @midudev",
+  title: {
+    template: "2024 AdventJS | %s",
+    default: "2024 AdventJS"
+  },
+  description:
+    "AdventJS is a challenge created by midudev to practice web development solving 25 challenges, one for each day of December.",
+  openGraph: {
+    title: "2024 AdventJS",
+    description:
+      "AdventJS is a challenge created by midudev to practice web development solving 25 challenges, one for each day of December.",
+    url: "https://adventjs.dev/",
+    type: "website",
+  },
 };
 
 const ibm_plex_mono = IBM_Plex_Mono({

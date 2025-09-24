@@ -1,6 +1,11 @@
 import { RotationalImage } from "@/components";
 import { IconExternalLink } from "@tabler/icons-react";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "About me"
+};
 
 // TODO -> Hydratation error
 

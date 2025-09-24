@@ -2,16 +2,7 @@ import { IconExternalLink } from '@tabler/icons-react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-	title: "2024 AdventJS - About AdventJS",
-	description:
-		"AdventJS es un reto creado por midudev para practicar desarrollo web resolviendo 25 desafíos, uno por cada día de diciembre.",
-	openGraph: {
-		title: "2024 AdventJS - About AdventJS",
-		description:
-			"AdventJS es un reto creado por midudev para practicar desarrollo web resolviendo 25 desafíos, uno por cada día de diciembre.",
-		url: "https://adventjs.dev/",
-		type: "website",
-	},
+	title: 'About AdventJS'
 };
 
 interface Link {
