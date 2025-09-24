@@ -9,3 +9,4 @@ export { DayRouteButton } from "./DayRouteButton";
 export { DayChallengeContent } from "./DayChallengeContent";
 export { CodeBlock } from "./CodeBlock";
 export { RotationalImage } from "./RotationalImage";
+export { ChallengesOverview } from "./ChallengesOverview";
