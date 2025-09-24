@@ -88,7 +88,7 @@ export default function DayPage({ params }: Props) {
 					<div></div>
 				)}
 			</header>
-			<section className="w-full px-[32px] py-[16px]">
+			<section className="w-full sm:px-[32px] px-[0px] py-[16px]">
 				<h1 className="text-[32px] font-bold underline">Day {challenge.day}</h1>
 				<article className="w-full mx-auto px-[16px] py-[16px] flex flex-col gap-[32px]">
 					<DayChallengeContent challenge={challenge} />
