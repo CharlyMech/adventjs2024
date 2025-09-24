@@ -10,6 +10,7 @@ export function AdventJSLogo() {
 				height={200}
 				className="scale-60 md:scale-100"
 				alt="AdventJS Challenge logo from original web site"
+				priority
 			/>
 		</Link>
 	);
