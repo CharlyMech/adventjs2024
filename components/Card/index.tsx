@@ -7,21 +7,18 @@ import { useRouter } from "next/navigation";
 
 type CardProps = {
 	day: Challenge;
+	className?: string;
 };
 
-export function Card({ day }: CardProps) {
+export function Card({ day, className }: CardProps) {
 	const router = useRouter();
-	const handleClick = () => {
-		router.push(`/day/${day.day}`);
-	};
-
 
 	return (
 		<motion.div
 			whileHover={{ scale: 1.05 }}
 			whileTap={{ scale: 0.95 }}
 			onClick={() => router.push(`/day/${day.day}`)}
-			className="relative bg-transparent min-w-[350px] max-w-[550px] p-[16px] rounded-[8px] shadow-lg flex items-center justify-center overflow-hidden cursor-pointer w-full"
+			className={`${className} relative bg-transparent min-w-[350px] max-w-[550px] p-[16px] rounded-[8px] shadow-lg flex items-center justify-center overflow-hidden cursor-pointer w-full`}
 			role="link"
 			aria-label={`Go to challenge day ${day.day}`}
 		>
