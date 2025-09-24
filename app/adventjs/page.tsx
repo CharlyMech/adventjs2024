@@ -86,7 +86,7 @@ export default function AdventJSPage() {
 				</section>
 
 				<div className="w-full text-center my-[64px] text-sm text-gray-400">
-					No es una web oficial. Todo el crédito para midudev y su comunidad ✨
+					This is not an official website. All credit goes to midudev and his community ✨
 				</div>
 			</div>
 		</main>
