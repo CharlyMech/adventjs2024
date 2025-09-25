@@ -21,7 +21,6 @@ export function CodeBlock({
 		setIsClient(true);
 	}, []);
 
-	// Procesar el código para manejar caracteres de escape correctamente
 	const processedCode = code
 		.replace(/\\n/g, '\n')
 		.replace(/\\t/g, '\t')

@@ -7,7 +7,7 @@ import { IconRotateClockwise } from "@tabler/icons-react";
 
 interface RotationalImageProps {
 	className?: string;
-	/** Images paths from /public */
+	/** Images paths */
 	primarySrc: string;
 	secondarySrc: string;
 	altPrimary?: string;

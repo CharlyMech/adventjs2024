@@ -7,8 +7,6 @@ export const metadata: Metadata = {
 	title: "About me"
 };
 
-// TODO -> Hydratation error
-
 interface Link {
 	href: string;
 	label: string;

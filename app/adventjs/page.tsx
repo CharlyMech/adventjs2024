@@ -39,7 +39,6 @@ export default function AdventJSPage() {
 					</a>
 				</div>
 
-				{/* About the challenge */}
 				<section className="mx-auto w-full max-w-[1000px]">
 					<div className="grid gap-[16px] lg:gap-[24px] lg:grid-cols-2">
 						<article className="backdrop-blur-xl bg-white/5 shadow-lg shadow-gray-500/10 rounded-[8px] p-[16px] md:p-[24px] border border-white/10 max-w-[650px] mx-auto">
@@ -61,7 +60,6 @@ export default function AdventJSPage() {
 					</div>
 				</section>
 
-				{/* Official links */}
 				<section className="mt-[16px] mx-auto w-full flex flex-col gap-[16px]">
 					<h2 className="text-xl sm:text-2xl font-bold">Official links</h2>
 					<div className="w-full md:max-w-[1000px] md:mx-auto">
@@ -84,10 +82,6 @@ export default function AdventJSPage() {
 						</div>
 					</div>
 				</section>
-
-				<div className="w-full text-center my-[64px] text-sm text-gray-400">
-					This is not an official website. All credit goes to midudev and his community ✨
-				</div>
 			</div>
 		</main>
 	);

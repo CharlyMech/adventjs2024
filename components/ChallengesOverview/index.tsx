@@ -2,8 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image'
 import { challenges } from '@/data/challenges';
-import { IconCalendarWeekFilled, IconExternalLink, IconFileTypeTs, IconStar, IconStarFilled } from '@tabler/icons-react';
-import { div } from 'motion/react-client';
+import { IconCalendarWeekFilled, IconExternalLink, IconStar, IconStarFilled } from '@tabler/icons-react';
 
 interface GitHubUser {
 	login: string;
