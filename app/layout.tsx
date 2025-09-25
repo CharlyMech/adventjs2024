@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
+
 const ibm_plex_mono = IBM_Plex_Mono({
   subsets: ['latin'],
   weight: ['400', '700'],
@@ -32,9 +37,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <body className={`${ibm_plex_mono.variable} h-full flex flex-col`}>
+      <body className={`${ibm_plex_mono.variable} h-full flex flex-col overflow-x-hidden`}>
         <NavBar />
-        <main className="flex-1 min-w-[400px] max-w-[1600px] mx-auto w-full pt-[100px] pb-4">
+        <main className="flex-1 min-w-0 max-w-[1600px] mx-auto w-full pt-[100px] pb-4">
           {children}
         </main>
         <Footer />

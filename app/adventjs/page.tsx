@@ -12,10 +12,10 @@ interface Link {
 
 export default function AdventJSPage() {
 	const links: Link[] = [
-		{ href: "https://adventjs.dev/", label: "Web oficial del reto" },
-		{ href: "https://midu.dev/", label: "Web oficial de midudev" },
-		{ href: "https://www.twitch.tv/midudev", label: "Canal de Twitch" },
-		{ href: "https://www.linkedin.com/in/midudev/", label: "Perfil de LinkedIn" },
+		{ href: "https://adventjs.dev/", label: "AdventJS challenge website" },
+		{ href: "https://midu.dev/", label: "Midudev's website" },
+		{ href: "https://www.twitch.tv/midudev", label: "Midudev's Twitch channel" },
+		{ href: "https://www.linkedin.com/in/midudev/", label: "Midudev's LinkedIn profile" },
 	];
 
 	return (
