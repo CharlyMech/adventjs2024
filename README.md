@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎄 2024 AdventJS
 
-## Getting Started
+A small site to showcase and follow the **AdventJS 2024** challenge by [midudev](https://midu.dev/).  
+⚠️ This is a **fan project** — not affiliated with or endorsed by midudev. Official challenge website: [AdventJS](https://adventjs.dev/)
 
-First, run the development server:
+## 📊 Final Results (AdventJS 2024)
+
+| Metric            | Result     |
+| ----------------- | ---------- |
+| ✅ Completed days | **26/26**  |
+| ⭐ Earned stars   | **97/130** |
+| 📈 Average stars  | **3.7**    |
+
+---
+
+## 🚀 Getting started
+
+Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/CharlyMech/adventjs2024.git
+cd adventjs2024
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm install   # or npm/yarn/bun
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Run the development server:
 
-## Learn More
+```bash
+pnpm dev
+# open http://localhost:3000
+```
 
-To learn more about Next.js, take a look at the following resources:
+Build & preview production version:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm build
+pnpm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🧱 Project structure (simplified)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+app/
+  page.tsx            # Home
+  adventjs/page.tsx   # About AdventJS
+  day/[id]/page.tsx   # Day pages
+components/
+  Footer/
+  ...
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🙌 Contributing
+
+Contributions are welcome! 🎉 You can:
+
+-  **Open issues** with ideas, bugs, or improvements
+-  **Send pull requests** with fixes or features
+
+👉 Please try to keep PRs small and focused. For bigger changes, open an issue first to discuss.
+
+---
+
+## 📝 License
+
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](./LICENSE)
+
+⚠️ This project is open source and free to use, modify, and contribute to — but **NOT for commercial use**.
+
+The **code** and **website** are licensed under the **Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)**.
+
+-  ✅ You may use, modify, and share the project **for non‑commercial purposes**.
+-  🚫 Commercial use is **not allowed**.
+
+See the [LICENSE](./LICENSE) file for the full text.
+
+---
+
+### Attribution
+
+_AdventJS_ is a programming challenge by [midudev](https://midu.dev/).  
+This project is a **community fan site** and is not affiliated with or endorsed by midudev.
