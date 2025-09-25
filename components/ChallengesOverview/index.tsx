@@ -188,7 +188,7 @@ export function ChallengesOverview() {
 											<h3>Average stars:</h3>
 											<div className="w-full flex items-center justify-center gap-[8px]">
 												<p className="text-[24px] font-semibold text-white inline-flex items-center gap-[8px]">
-													<IconStar className="text-sky-600" size={22} />
+													<IconStar className="text-green-500" size={22} />
 													{challengeStats.averageStars.toFixed(1)}
 												</p>
 											</div>

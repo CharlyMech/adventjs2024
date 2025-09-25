@@ -42,7 +42,7 @@ export default function AboutMe() {
 							</div>
 							<div className="w-full md:flex-1 md:min-w-0">
 								<p className="text-[16px] xl:text-[18px] lg:text-[18px] md:text-[20px] leading-relaxed text-white">
-									Also known as <span className="font-semibold">@CharlyMech</span>, I’m a <span className="font-semibold">Mobile and Full Stack Developer</span> from Spain, experienced in building cross-platform mobile frameworks, such as Flutter and React Native, also native development with Jetpack Compose (Kotlin), web development with React/NextJS and Angular and also data analysis and machine learning with Python and several libraries like FastAPI, Tensorflow, scikit-learn, pandas, numpy, matplotlib, seaborn, etc.
+									Also known as <span className="font-semibold">@CharlyMech</span>, I’m a <span className="font-semibold">Mobile and Full Stack Developer</span> from Spain, experienced in building cross-platform mobile apps with frameworks such as Flutter and React Native, Android native development with Jetpack Compose (Kotlin), web development with React/NextJS and Angular and also data analysis and machine learning with Python using several libraries like FastAPI, Tensorflow, scikit-learn, pandas, numpy, matplotlib, seaborn, etc.
 								</p>
 							</div>
 						</div>
